@@ -6,7 +6,7 @@
 /*   By: aait-mal <aait-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:18:31 by aait-mal          #+#    #+#             */
-/*   Updated: 2022/11/11 14:35:08 by aait-mal         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:00:22 by aait-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,21 @@ void	ft_putnbr_unsiged_fd(unsigned int nb, int fd, int *length)
 	{
 		ft_putnbr_fd(nb / 10, fd, length);
 		ft_putnbr_fd(nb % 10, fd, length);
+	}
+}
+
+void	ft_putnbr_base(size_t nbr, char *base, int	*length, int C)
+{
+	unsigned int	base_len;
+
+	base_len = ft_strlen(base);
+	if (C != 'p')
+		nbr = (unsigned int)nbr;
+	if (nbr >= 0 && nbr < base_len)
+		ft_putchar_fd(base[nbr], 1, length);
+	else
+	{
+		ft_putnbr_base(nbr / base_len, base, length, C);
+		ft_putnbr_base(nbr % base_len, base, length, C);
 	}
 }
