@@ -6,7 +6,7 @@
 /*   By: aait-mal <aait-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:15:07 by aait-mal          #+#    #+#             */
-/*   Updated: 2022/11/11 15:04:02 by aait-mal         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:45:38 by aait-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ void	check_option(const char *string, va_list arg, int *length)
 	if (*string == 'u')
 		ft_putnbr_unsiged_fd(va_arg(arg, unsigned int), 1, length);
 	if (*string == 'x')
-		ft_putnbr_base(va_arg(arg, int), BASE_HEX_LOW, length);
+		ft_putnbr_base(va_arg(arg, int), BASE_HEX_LOW, length, *string);
 	if (*string == 'X')
-		ft_putnbr_base(va_arg(arg, unsigned int), BASE_HEX_UP, length);
+		ft_putnbr_base(va_arg(arg, unsigned int), BASE_HEX_UP, length, *string);
 	if (*string == 'p')
 	{
 		ft_putstr_fd("0x", 1, length);
-		ft_putptr(va_arg(arg, int *), length);
+		ft_putptr((size_t)va_arg(arg, void *), length, *string);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: aait-mal <aait-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:09:42 by aait-mal          #+#    #+#             */
-/*   Updated: 2022/11/11 15:04:20 by aait-mal         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:50:19 by aait-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_printf(const char *string, ...)
 		if (*string == '%')
 		{
 			string++;
+			if (!(*string))
+				break ;
 			check_option(string, arg, &length);
 		}
 		else

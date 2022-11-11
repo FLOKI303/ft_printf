@@ -6,7 +6,7 @@
 /*   By: aait-mal <aait-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:10:21 by aait-mal          #+#    #+#             */
-/*   Updated: 2022/11/11 15:06:38 by aait-mal         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:45:17 by aait-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int nb, int fd, int *length);
 void	ft_putnbr_unsiged_fd(unsigned int nb, int fd, int *length);
 void	ft_putchar_fd(char c, int fd, int *length);
 void	ft_putstr_fd(char *s, int fd, int *length);
-void	ft_putnbr_base(unsigned int nbr, char *base, int	*length);
-void	ft_putptr(int *nbr, int *length);
+void	ft_putnbr_base(size_t nbr, char *base, int	*length, int C);
+void	ft_putptr(size_t nbr, int *length, int C);
 
 #endif
