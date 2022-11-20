@@ -6,7 +6,7 @@
 /*   By: aait-mal <aait-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:10:21 by aait-mal          #+#    #+#             */
-/*   Updated: 2022/11/11 16:12:55 by aait-mal         ###   ########.fr       */
+/*   Updated: 2022/11/20 16:52:41 by aait-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 
 # include<unistd.h>
 # include<stdarg.h>
-// Temp
-# include<stdio.h>
-//
 
 int		ft_printf(const char *string, ...);
 void	check_option(const char *string, va_list arg, int *length);
